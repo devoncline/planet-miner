@@ -11,6 +11,8 @@ let uncommonItems = ['Quartz Cluster', 'Frost Shard', 'Solar Ore'];
 let rareItems = ['Meteor Fragment', 'Nebula Fragment', 'Void Fragment'];
 let legendaryItems = ['Ancient Star Relic', 'Celestial Relic', 'Eclipse Relic'];
 
+let discoveredItems = JSON.parse(localStorage.getItem('discoveredItems')) || [];
+
 mineButton.addEventListener('click', function () {
     const randomNumber = Math.random();
 
@@ -25,6 +27,12 @@ mineButton.addEventListener('click', function () {
         }
 
         commonRocks++;
+
+        if (!discoveredItems.includes(item)) {
+            discoveredItems.push(item);
+            localStorage.setItem('discoveredItems', JSON.stringify(discoveredItems));
+        }
+
     } else if (randomNumber < 0.85) {
         const randomIndex = Math.floor(Math.random() * uncommonItems.length);
         const item = uncommonItems[randomIndex];
@@ -36,6 +44,12 @@ mineButton.addEventListener('click', function () {
         }
 
         uncommonCrystals++;
+
+        if (!discoveredItems.includes(item)) {
+            discoveredItems.push(item);
+            localStorage.setItem('discoveredItems', JSON.stringify(discoveredItems));
+        }
+
     } else if (randomNumber < 0.95) {
         const randomIndex = Math.floor(Math.random() * rareItems.length);
         const item = rareItems[randomIndex];
@@ -47,6 +61,12 @@ mineButton.addEventListener('click', function () {
         }
 
         rareFragments++;
+
+        if (!discoveredItems.includes(item)) {
+            discoveredItems.push(item);
+            localStorage.setItem('discoveredItems', JSON.stringify(discoveredItems));
+        }
+
     } else {
         const randomIndex = Math.floor(Math.random() * legendaryItems.length);
         const item = legendaryItems[randomIndex];
@@ -58,6 +78,11 @@ mineButton.addEventListener('click', function () {
         }
 
         legendaryRelics++;
+
+        if (!discoveredItems.includes(item)) {
+            discoveredItems.push(item);
+            localStorage.setItem('discoveredItems', JSON.stringify(discoveredItems));
+        }
     }
 });
 
