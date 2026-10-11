@@ -11,7 +11,7 @@ body {
     display: none;
     padding: 10px;
     background-color: #f4c66a;
-    color: white;
+    color: #111426;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -24,8 +24,12 @@ body {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #8fd3ff;
     padding: 8px 12px;
+}
+
+nav a:hover {
+    color: #f4c66a;
 }
 
 nav ul {
@@ -38,6 +42,8 @@ nav ul {
 
 h1 {
     margin-bottom: 20px;
+    color: #f4c66a;
+    letter-spacing: 2px;
 }
 
 #miningResult {
