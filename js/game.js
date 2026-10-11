@@ -1,5 +1,17 @@
 const mineButton = document.getElementById('mineButton');
 const mineResult = document.getElementById('miningResult');
+const asteroid = document.getElementById('asteroid');
+
+let directions = ['right', 'left', 'bottom'];
+let randomDirection = directions[Math.floor(Math.random() * directions.length)];
+
+if (randomDirection === 'right') {
+    asteroid.style.animation = 'asteroidCrashRight 3s linear';
+} else if (randomDirection === 'left') {
+    asteroid.style.animation = 'asteroidCrashLeft 3s linear';
+} else {
+    asteroid.style.animation = 'asteroidCrashBottom 3s linear';
+}
 
 let commonRocks = 0;
 let uncommonCrystals = 0;

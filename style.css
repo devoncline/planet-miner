@@ -62,6 +62,8 @@ h1 {
     background-size: cover;
     background-position: center;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
 #planet {
@@ -81,5 +83,52 @@ h1 {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+#asteroid {
+    width: 60px;
+    position: absolute;
+    top: 80px;
+    right: -80px;
+}
+
+@keyframes asteroidCrashRight {
+    0% {
+        right: -80px;
+        top: 80px;
+    }
+
+    100% {
+        right: 275px;
+        top: 160px;
+    }
+}
+
+@keyframes asteroidCrashLeft {
+    0% {
+        left: -80px;
+        right: auto;
+        top: 30px;
+    }
+
+    100% {
+        left: 275px;
+        right: auto;
+        top: 160px;
+    }
+}
+
+@keyframes asteroidCrashBottom {
+    0% {
+        bottom: -80px;
+        right: 200px;
+        top: auto;
+    }
+
+    100% {
+        bottom: 170px;
+        right: 275px;
+        top: auto;
     }
 }
