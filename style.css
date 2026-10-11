@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 body {
     background-color: #111426;
     color: #f4f0e6;
     text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 #mineButton {
@@ -16,7 +19,7 @@ body {
 }
 
 #mineButton:hover {
-    background-color: rgb(62, 210, 35);
+    background-color: #d9a94d;
 }
 
 nav a {
@@ -198,21 +201,28 @@ h1 {
 }
 
 .commonResult {
-    color: white;
+    color: #f4f0e6;
 }
 
 .uncommonResult {
-    color: lightgreen;
+    color: #9be7c4;
 }
 
 .rareResult {
-    color: lightskyblue;
+    color: #8fd3ff;
 }
 
 .legendaryResult {
-    color: gold;
+    color: #f4c66a;
 }
 
 #continueButton {
     display: none;
+    padding: 10px;
+    background-color: #8fd3ff;
+    color: #111426;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
 }
