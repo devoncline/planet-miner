@@ -6,6 +6,25 @@ const continueButton = document.getElementById('continueButton');
 const incomingAlert = document.getElementById('incomingAlert');
 const impactSound = new Audio('assets/sounds/explosion.wav');
 impactSound.volume = 0.2;
+const settingsButton = document.getElementById('settingsButton');
+const settingsPanel = document.getElementById('settingsPanel');
+const sfxToggle = document.getElementById('sfxToggle');
+const savedSfxSetting = localStorage.getItem('sfxEnabled');
+const musicToggle = document.getElementById('musicToggle');
+const savedMusicSetting = localStorage.getItem('musicEnabled');
+const backgroundMusic = new Audio('assets/sounds/space-ambient.mp3');
+
+backgroundMusic.volume = .2;
+backgroundMusic.loop = true;
+
+if (savedSfxSetting === 'false') {
+    sfxToggle.checked = false;
+    impactSound.muted = true;
+}
+
+if (savedMusicSetting === 'false') {
+    musicToggle.checked = false;
+}
 
 let currentDirection;
 
@@ -130,4 +149,35 @@ continueButton.addEventListener('click', function () {
     continueButton.style.display = 'none';
     mineResult.style.display = 'none';
     launchAsteroid();
+});
+
+settingsButton.addEventListener('click', function () {
+    if (settingsPanel.style.display === 'block') {
+        settingsPanel.style.display = 'none';
+    } else {
+        settingsPanel.style.display = 'block';
+    }
+});
+
+sfxToggle.addEventListener('change', function () {
+    impactSound.muted = !sfxToggle.checked;
+    localStorage.setItem('sfxEnabled', sfxToggle.checked);
+});
+
+musicToggle.addEventListener('change', function () {
+    localStorage.setItem('musicEnabled', musicToggle.checked);
+
+    if (musicToggle.checked) {
+        backgroundMusic.play();
+    } else {
+        backgroundMusic.pause();
+    }
+});
+
+document.addEventListener('click', function startMusic() {
+    if (musicToggle.checked) {
+        backgroundMusic.play();
+    }
+
+    document.removeEventListener('click', startMusic);
 });

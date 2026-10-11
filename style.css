@@ -482,3 +482,33 @@ h1 {
         padding-bottom: 80px;
     }
 }
+
+#settingsButton {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#settingsPanel {
+    display: none;
+    position: fixed;
+    top: 55px;
+    right: 18px;
+    background-color: #1d2138;
+    border: 1px solid #6f7698;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: left;
+    z-index: 1000;
+}
+
+#settingsPanel label {
+    display: block;
+    margin-top: 8px;
+}
