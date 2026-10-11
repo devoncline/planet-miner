@@ -17,6 +17,14 @@ Items are divided into four rarities:
 
 Discovered items are saved in the player's collection using localStorage, so progress stays saved after refreshing or leaving the page.
 
+## Design Process
+
+I started by planning Planet Miner as a simple JavaScript-powered game with three pages: a home page, a game page, and a collection page.
+
+I first built the basic HTML structure and navigation, then added the game logic with JavaScript. After the main mining system was working, I added localStorage so discoveries could be saved between pages.
+
+I then focused on the visual design by adding a pixel-style space theme, animations, rarity effects, and responsive mobile styling. I continued testing and adjusting the project as new features were added, including the collection categories and reset confirmation modal.
+
 ## Features
 
 - Animated pixel-style space environment
