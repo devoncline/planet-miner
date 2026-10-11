@@ -159,6 +159,21 @@ h1 {
     transform-origin: center center;
 }
 
+#homeAsteroid {
+    width: 60px;
+    position: absolute;
+    top: 80px;
+    right: -80px;
+    transform-origin: center center;
+}
+
+#homeImpactFlash {
+    position: absolute;
+    display: none;
+    width: 70px;
+    height: 70px;
+}
+
 @keyframes asteroidCrashRight {
     0% {
         right: -80px;
