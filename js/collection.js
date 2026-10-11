@@ -2,6 +2,7 @@ const commonCollection = document.getElementById('commonCollection');
 const uncommonCollection = document.getElementById('uncommonCollection');
 const rareCollection = document.getElementById('rareCollection');
 const legendaryCollection = document.getElementById('legendaryCollection');
+const resetButton = document.getElementById('resetButton');
 let discoveredItems = JSON.parse(localStorage.getItem('discoveredItems')) || [];
 
 let allItems = [
@@ -54,3 +55,8 @@ for (let i = 0; i < allItems.length; i++) {
         legendaryCollection.appendChild(itemElement);
     }
 }
+
+resetButton.addEventListener('click', function () {
+    localStorage.removeItem('discoveredItems');
+    location.reload();
+});

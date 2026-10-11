@@ -37,6 +37,7 @@ body {
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    font-family: inherit;
 }
 
 #mineButton:hover {
@@ -52,6 +53,21 @@ body {
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    font-family: inherit;
+}
+
+#resetButton {
+    padding: 10px 16px;
+    background-color: #2b2f4a;
+    color: #f4f0e6;
+    border: 1px solid #6f7698;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#resetButton:hover {
+    background-color: #3a3f61;
 }
 
 nav a {
