@@ -92,17 +92,24 @@ h1 {
     position: absolute;
     top: 80px;
     right: -80px;
+    transform-origin: center center;
 }
 
 @keyframes asteroidCrashRight {
     0% {
         right: -80px;
         top: 80px;
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
     }
 
     100% {
-        right: 275px;
+        right: 285px;
         top: 160px;
+        transform: rotate(-8deg);
     }
 }
 
@@ -111,12 +118,18 @@ h1 {
         left: -80px;
         right: auto;
         top: 30px;
+        transform: rotate(8deg);
+    }
+
+    50% {
+        transform: rotate(-8deg);
     }
 
     100% {
         left: 285px;
         right: auto;
-        top: 140px;
+        top: 160px;
+        transform: rotate(8deg);
     }
 }
 
@@ -125,11 +138,17 @@ h1 {
         bottom: -80px;
         right: 200px;
         top: auto;
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
     }
 
     100% {
-        bottom: 140px;
+        bottom: 150px;
         right: 310px;
         top: auto;
+        transform: rotate(-8deg);
     }
 }
