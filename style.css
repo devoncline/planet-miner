@@ -124,6 +124,55 @@ h1 {
     max-width: 800px;
 }
 
+.uncommon {
+    color: #9be7c4;
+    text-shadow: 0 0 6px #9be7c4;
+}
+
+.rare {
+    color: #8fd3ff;
+    animation: rareGlow 1.8s ease-in-out infinite;
+}
+
+@keyframes rareGlow {
+    0% {
+        text-shadow: 0 0 4px #8fd3ff;
+    }
+
+    50% {
+        text-shadow: 0 0 12px #8fd3ff;
+    }
+
+    100% {
+        text-shadow: 0 0 4px #8fd3ff;
+    }
+}
+
+.legendary {
+    color: #ffd34e;
+    animation: legendaryGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes legendaryGlow {
+    0% {
+        text-shadow:
+            0 0 5px #ffd34e,
+            0 0 10px #ffd34e;
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px #ffd34e,
+            0 0 18px #ffd34e;
+    }
+
+    100% {
+        text-shadow:
+            0 0 5px #ffd34e,
+            0 0 10px #ffd34e;
+    }
+}
+
 #gameArea {
     width: 700px;
     height: 400px;
@@ -315,6 +364,7 @@ h1 {
     color: #f4c66a;
 }
 
+/* This doesn't actually create a working mobile version, but it's close enough lol. */
 @media (max-width: 768px) {
 
     #gameArea,
