@@ -11,6 +11,7 @@ body {
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 #mineButton:hover {
@@ -60,4 +61,25 @@ h1 {
     background-image: url('assets/backgrounds/Minimalist\ Retro\ Pixel\ Starfield.png');
     background-size: cover;
     background-position: center;
+    margin: 0 auto;
+}
+
+#planet {
+    width: 150px;
+    margin-top: 120px;
+    animation: floatPlanet 4s ease-in-out infinite;
+}
+
+@keyframes floatPlanet {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
