@@ -77,6 +77,12 @@ The project contains three main pages:
 - JavaScript
 - GitHub Pages
 
+## Assets
+
+Pixel art assets used in this project came from the [MemoryBlock Galactic Pack](https://theseusinteractivestudio.itch.io/memoryblock-galactic-pack-first-release) by Theseus Interactive Studio.
+
+The starfield background image was created with ChatGPT.
+
 ## Live Site
 
 [Play Planet Miner](https://devoncline.github.io/planet-miner/)
