@@ -238,6 +238,34 @@ h1 {
     overflow: hidden;
 }
 
+#incomingAlert {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: 0;
+    color: #ff4444;
+    font-size: 20px;
+    font-weight: bold;
+    animation: incomingFlash 0.45s ease-in-out 3;
+}
+
+@keyframes incomingFlash {
+    0% {
+        text-shadow: 0 0 4px #ff4444;
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px #ff4444,
+            0 0 18px #ff4444;
+    }
+
+    100% {
+        text-shadow: 0 0 4px #ff4444;
+    }
+}
+
 #homeGameArea {
     width: 700px;
     height: 400px;

@@ -3,10 +3,13 @@ const mineResult = document.getElementById('miningResult');
 const asteroid = document.getElementById('asteroid');
 const impactFlash = document.getElementById('impactFlash');
 const continueButton = document.getElementById('continueButton');
+const incomingAlert = document.getElementById('incomingAlert');
 
 let currentDirection;
 
 function launchAsteroid() {
+    incomingAlert.style.display = 'block';
+
     asteroid.style.animation = 'none';
     void asteroid.offsetWidth;
 
@@ -24,6 +27,7 @@ function launchAsteroid() {
 launchAsteroid();
 
 asteroid.addEventListener('animationend', function () {
+    incomingAlert.style.display = 'none';
     if (currentDirection === 'right') {
         impactFlash.style.left = '350px';
         impactFlash.style.top = '155px';
