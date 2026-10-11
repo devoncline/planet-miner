@@ -28,6 +28,19 @@ body {
     background-color: #d9a94d;
 }
 
+#collectionLink {
+    display: block;
+    width: fit-content;
+    margin: 14px auto 0;
+    color: #8fd3ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#collectionLink:hover {
+    color: #ffd34e;
+}
+
 #mineButton {
     display: none;
     padding: 10px;
