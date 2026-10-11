@@ -7,6 +7,27 @@ body {
     font-family: 'Pixelify Sans', sans-serif;
 }
 
+#welcomeMessage {
+    max-width: 650px;
+    margin: 20px auto 0;
+    line-height: 1.5;
+}
+
+#startButton {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #f4c66a;
+    color: #111426;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#startButton:hover {
+    background-color: #d9a94d;
+}
+
 #mineButton {
     display: none;
     padding: 10px;
@@ -20,6 +41,17 @@ body {
 
 #mineButton:hover {
     background-color: #d9a94d;
+}
+
+#continueButton {
+    display: none;
+    padding: 10px;
+    background-color: #8fd3ff;
+    color: #111426;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 nav a {
@@ -81,7 +113,25 @@ h1 {
     overflow: hidden;
 }
 
+#homeGameArea {
+    width: 700px;
+    height: 400px;
+    border: 2px solid #6f7698;
+    background-image: url('assets/backgrounds/Minimalist\ Retro\ Pixel\ Starfield.png');
+    background-size: cover;
+    background-position: center;
+    margin: 55px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
 #planet {
+    width: 150px;
+    margin-top: 120px;
+    animation: floatPlanet 4s ease-in-out infinite;
+}
+
+#homePlanet {
     width: 150px;
     margin-top: 120px;
     animation: floatPlanet 4s ease-in-out infinite;
@@ -225,15 +275,4 @@ h1 {
 
 .legendaryResult {
     color: #f4c66a;
-}
-
-#continueButton {
-    display: none;
-    padding: 10px;
-    background-color: #8fd3ff;
-    color: #111426;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
 }
