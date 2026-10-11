@@ -2,6 +2,7 @@ const mineButton = document.getElementById('mineButton');
 const mineResult = document.getElementById('miningResult');
 const asteroid = document.getElementById('asteroid');
 const impactFlash = document.getElementById('impactFlash');
+const continueButton = document.getElementById('continueButton');
 
 let currentDirection;
 
@@ -55,17 +56,16 @@ let discoveredItems = JSON.parse(localStorage.getItem('discoveredItems')) || [];
 
 mineButton.addEventListener('click', function () {
     mineButton.style.display = 'none';
+    mineResult.style.display = 'block';
+
     const randomNumber = Math.random();
 
     if (randomNumber < 0.60) {
         const randomIndex = Math.floor(Math.random() * commonItems.length);
         const item = commonItems[randomIndex];
 
-        if (item[0] === 'A' || item[0] === 'E' || item[0] === 'I' || item[0] === 'O' || item[0] === 'U') {
-            mineResult.textContent = 'You found an ' + item + '!';
-        } else {
-            mineResult.textContent = 'You found a ' + item + '!';
-        }
+        mineResult.textContent = 'COMMON: ' + item;
+        mineResult.className = 'commonResult';
 
         commonRocks++;
 
@@ -78,11 +78,8 @@ mineButton.addEventListener('click', function () {
         const randomIndex = Math.floor(Math.random() * uncommonItems.length);
         const item = uncommonItems[randomIndex];
 
-        if (item[0] === 'A' || item[0] === 'E' || item[0] === 'I' || item[0] === 'O' || item[0] === 'U') {
-            mineResult.textContent = 'You found an ' + item + '!';
-        } else {
-            mineResult.textContent = 'You found a ' + item + '!';
-        }
+        mineResult.textContent = 'UNCOMMON: ' + item;
+        mineResult.className = 'uncommonResult';
 
         uncommonCrystals++;
 
@@ -95,11 +92,8 @@ mineButton.addEventListener('click', function () {
         const randomIndex = Math.floor(Math.random() * rareItems.length);
         const item = rareItems[randomIndex];
 
-        if (item[0] === 'A' || item[0] === 'E' || item[0] === 'I' || item[0] === 'O' || item[0] === 'U') {
-            mineResult.textContent = 'You found an ' + item + '!';
-        } else {
-            mineResult.textContent = 'You found a ' + item + '!';
-        }
+        mineResult.textContent = 'RARE: ' + item;
+        mineResult.className = 'rareResult';
 
         rareFragments++;
 
@@ -112,11 +106,8 @@ mineButton.addEventListener('click', function () {
         const randomIndex = Math.floor(Math.random() * legendaryItems.length);
         const item = legendaryItems[randomIndex];
 
-        if (item[0] === 'A' || item[0] === 'E' || item[0] === 'I' || item[0] === 'O' || item[0] === 'U') {
-            mineResult.textContent = 'You found an ' + item + '!';
-        } else {
-            mineResult.textContent = 'You found a ' + item + '!';
-        }
+        mineResult.textContent = 'LEGENDARY: ' + item;
+        mineResult.className = 'legendaryResult';
 
         legendaryRelics++;
 
@@ -125,5 +116,11 @@ mineButton.addEventListener('click', function () {
             localStorage.setItem('discoveredItems', JSON.stringify(discoveredItems));
         }
     }
+    continueButton.style.display = 'inline-block';
+});
+
+continueButton.addEventListener('click', function () {
+    continueButton.style.display = 'none';
+    mineResult.style.display = 'none';
     launchAsteroid();
 });

@@ -196,3 +196,23 @@ h1 {
     top: 38px;
     left: 43px;
 }
+
+.commonResult {
+    color: white;
+}
+
+.uncommonResult {
+    color: lightgreen;
+}
+
+.rareResult {
+    color: lightskyblue;
+}
+
+.legendaryResult {
+    color: gold;
+}
+
+#continueButton {
+    display: none;
+}
