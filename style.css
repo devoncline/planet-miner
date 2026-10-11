@@ -113,9 +113,9 @@ h1 {
     }
 
     100% {
-        left: 275px;
+        left: 285px;
         right: auto;
-        top: 160px;
+        top: 140px;
     }
 }
 
@@ -127,8 +127,8 @@ h1 {
     }
 
     100% {
-        bottom: 170px;
-        right: 275px;
+        bottom: 140px;
+        right: 310px;
         top: auto;
     }
 }
