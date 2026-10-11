@@ -90,15 +90,22 @@ h1 {
 .collectionItem {
     padding: 12px;
     background-color: rgb(40, 40, 70);
-    border: 1px solid white;
+    border: 1px solid #6f7698;
     border-radius: 10px;
 }
 
-#collectionList {
+#commonCollection,
+#uncommonCollection,
+#rareCollection,
+#legendaryCollection {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    margin: 20px;
+}
+
+.collectionSection {
+    margin: 30px auto;
+    max-width: 800px;
 }
 
 #gameArea {

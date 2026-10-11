@@ -1,4 +1,7 @@
-const collection = document.getElementById("collectionList");
+const commonCollection = document.getElementById('commonCollection');
+const uncommonCollection = document.getElementById('uncommonCollection');
+const rareCollection = document.getElementById('rareCollection');
+const legendaryCollection = document.getElementById('legendaryCollection');
 let discoveredItems = JSON.parse(localStorage.getItem('discoveredItems')) || [];
 
 let allItems = [
@@ -33,19 +36,21 @@ for (let i = 0; i < allItems.length; i++) {
     itemElement.classList.add('collectionItem');
     if (commonItems.includes(allItems[i])) {
         itemElement.classList.add('common');
+        commonCollection.appendChild(itemElement);
     }
 
     if (uncommonItems.includes(allItems[i])) {
         itemElement.classList.add('uncommon');
+        uncommonCollection.appendChild(itemElement);
     }
 
     if (rareItems.includes(allItems[i])) {
         itemElement.classList.add('rare');
+        rareCollection.appendChild(itemElement);
     }
 
     if (legendaryItems.includes(allItems[i])) {
         itemElement.classList.add('legendary');
+        legendaryCollection.appendChild(itemElement);
     }
-
-    collection.appendChild(itemElement);
 }
