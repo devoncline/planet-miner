@@ -3,6 +3,10 @@ const uncommonCollection = document.getElementById('uncommonCollection');
 const rareCollection = document.getElementById('rareCollection');
 const legendaryCollection = document.getElementById('legendaryCollection');
 const resetButton = document.getElementById('resetButton');
+const resetModal = document.getElementById('resetModal');
+const cancelResetButton = document.getElementById('cancelResetButton');
+const confirmResetButton = document.getElementById('confirmResetButton');
+
 let discoveredItems = JSON.parse(localStorage.getItem('discoveredItems')) || [];
 
 let allItems = [
@@ -57,6 +61,14 @@ for (let i = 0; i < allItems.length; i++) {
 }
 
 resetButton.addEventListener('click', function () {
+    resetModal.style.display = 'flex';
+});
+
+cancelResetButton.addEventListener('click', function () {
+    resetModal.style.display = 'none';
+});
+
+confirmResetButton.addEventListener('click', function () {
     localStorage.removeItem('discoveredItems');
     location.reload();
 });
