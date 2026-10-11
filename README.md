@@ -79,12 +79,6 @@ The project contains three main pages:
 
 ## Assets
 
-Pixel art assets used in this project came from the [MemoryBlock Galactic Pack](https://theseusinteractivestudio.itch.io/memoryblock-galactic-pack-first-release) by Theseus Interactive Studio.
-
-The starfield background image was created with ChatGPT.
-
-## Assets
-
 Pixel art assets and sound effects used in this project came from the [Pixel Space Pack](https://theseusinteractivestudio.itch.io/memoryblock-galactic-pack-first-release) by Theseus Interactive Studio.
 
 The starfield background image was created with ChatGPT.
