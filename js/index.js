@@ -44,4 +44,4 @@ homeAsteroid.addEventListener('animationend', function () {
     }, 1800);
 });
 
-welcomeMessage.textContent = 'Welcome Miner! Get ready to embark on an interstellar adventure. Explore distant planets, mine valuable resources, and build your collection of rare discoveries.';
+welcomeMessage.textContent = 'Welcome Miner! Track incoming asteroids, mine their impact sites, and build a collection of rare space discoveries.';
