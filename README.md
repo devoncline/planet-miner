@@ -83,6 +83,14 @@ Pixel art assets used in this project came from the [MemoryBlock Galactic Pack](
 
 The starfield background image was created with ChatGPT.
 
+## Assets
+
+Pixel art assets and sound effects used in this project came from the [Pixel Space Pack](https://theseusinteractivestudio.itch.io/memoryblock-galactic-pack-first-release) by Theseus Interactive Studio.
+
+The starfield background image was created with ChatGPT.
+
+Background music: [Space Ambient](https://pixabay.com/music/ambient-space-ambient-351305/) by DELOSound from Pixabay.
+
 ## Live Site
 
 [Play Planet Miner](https://devoncline.github.io/planet-miner/)
