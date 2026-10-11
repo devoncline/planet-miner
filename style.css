@@ -291,3 +291,33 @@ h1 {
 .legendaryResult {
     color: #f4c66a;
 }
+
+@media (max-width: 768px) {
+
+    #gameArea,
+    #homeGameArea {
+        width: calc(100% - 32px);
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #planet,
+    #homePlanet {
+        position: absolute;
+        width: 150px;
+        left: 50%;
+        top: 125px;
+        margin-left: -75px;
+        margin-top: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+        min-height: 100vh;
+        padding-bottom: 80px;
+    }
+}
