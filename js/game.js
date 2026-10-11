@@ -4,6 +4,8 @@ const asteroid = document.getElementById('asteroid');
 const impactFlash = document.getElementById('impactFlash');
 const continueButton = document.getElementById('continueButton');
 const incomingAlert = document.getElementById('incomingAlert');
+const impactSound = new Audio('assets/sounds/explosion.wav');
+impactSound.volume = 0.2;
 
 let currentDirection;
 
@@ -27,6 +29,7 @@ function launchAsteroid() {
 launchAsteroid();
 
 asteroid.addEventListener('animationend', function () {
+    impactSound.play();
     incomingAlert.style.display = 'none';
     if (currentDirection === 'right') {
         impactFlash.style.left = '350px';
