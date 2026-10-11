@@ -52,3 +52,12 @@ h1 {
     gap: 12px;
     margin: 20px;
 }
+
+#gameArea {
+    width: 700px;
+    height: 400px;
+    border: 2px solid white;
+    background-image: url('assets/backgrounds/Minimalist\ Retro\ Pixel\ Starfield.png');
+    background-size: cover;
+    background-position: center;
+}
