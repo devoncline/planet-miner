@@ -156,8 +156,8 @@ h1 {
 #impactFlash {
     position: absolute;
     display: none;
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
 }
 
 .spark {
@@ -166,33 +166,33 @@ h1 {
 }
 
 .spark1 {
-    width: 14px;
-    height: 14px;
+    width: 28px;
+    height: 28px;
     background-color: white;
-    top: 8px;
-    left: 8px;
+    top: 20px;
+    left: 20px;
 }
 
 .spark2 {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     background-color: rgb(255, 220, 120);
-    top: 2px;
-    left: 12px;
+    top: 8px;
+    left: 28px;
 }
 
 .spark3 {
-    width: 8px;
-    height: 8px;
+    width: 17px;
+    height: 17px;
     background-color: rgb(255, 150, 60);
-    top: 14px;
-    left: 3px;
+    top: 35px;
+    left: 8px;
 }
 
 .spark4 {
-    width: 6px;
-    height: 6px;
+    width: 12px;
+    height: 12px;
     background-color: white;
-    top: 15px;
-    left: 18px;
+    top: 38px;
+    left: 43px;
 }

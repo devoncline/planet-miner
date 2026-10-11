@@ -24,17 +24,20 @@ launchAsteroid();
 
 asteroid.addEventListener('animationend', function () {
     if (currentDirection === 'right') {
-    impactFlash.style.left = '410px';
-    impactFlash.style.top = '160px';
-} else if (currentDirection === 'left') {
-    impactFlash.style.left = '270px';
-    impactFlash.style.top = '160px';
-} else {
-    impactFlash.style.left = '335px';
-    impactFlash.style.top = '225px';
-}
+        impactFlash.style.left = '350px';
+        impactFlash.style.top = '155px';
+    } else if (currentDirection === 'left') {
+        impactFlash.style.left = '280px';
+        impactFlash.style.top = '155px';
+    } else {
+        impactFlash.style.left = '325px';
+        impactFlash.style.top = '185px';
+    }
 
     impactFlash.style.display = 'block';
+    setTimeout(function () {
+        impactFlash.style.display = 'none';
+    }, 350);
     mineButton.style.display = 'inline-block';
 });
 
