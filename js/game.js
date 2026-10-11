@@ -2,16 +2,22 @@ const mineButton = document.getElementById('mineButton');
 const mineResult = document.getElementById('miningResult');
 const asteroid = document.getElementById('asteroid');
 
-let directions = ['right', 'left', 'bottom'];
-let randomDirection = directions[Math.floor(Math.random() * directions.length)];
+function launchAsteroid() {
+    asteroid.style.animation = 'none';
+    void asteroid.offsetWidth;
 
-if (randomDirection === 'right') {
-    asteroid.style.animation = 'asteroidCrashRight 3s linear';
-} else if (randomDirection === 'left') {
-    asteroid.style.animation = 'asteroidCrashLeft 3s linear';
-} else {
-    asteroid.style.animation = 'asteroidCrashBottom 3s linear';
+    let directions = ['right', 'left', 'bottom'];
+    let randomDirection = directions[Math.floor(Math.random() * directions.length)];
+
+    if (randomDirection === 'right') {
+        asteroid.style.animation = 'asteroidCrashRight 3s linear';
+    } else if (randomDirection === 'left') {
+        asteroid.style.animation = 'asteroidCrashLeft 3s linear';
+    } else {
+        asteroid.style.animation = 'asteroidCrashBottom 3s linear';
+    }
 }
+launchAsteroid();
 
 asteroid.addEventListener('animationend', function () {
     mineButton.style.display = 'inline-block';
@@ -30,6 +36,7 @@ let legendaryItems = ['Ancient Star Relic', 'Celestial Relic', 'Eclipse Relic'];
 let discoveredItems = JSON.parse(localStorage.getItem('discoveredItems')) || [];
 
 mineButton.addEventListener('click', function () {
+    mineButton.style.display = 'none';
     const randomNumber = Math.random();
 
     if (randomNumber < 0.60) {
@@ -100,5 +107,5 @@ mineButton.addEventListener('click', function () {
             localStorage.setItem('discoveredItems', JSON.stringify(discoveredItems));
         }
     }
+    launchAsteroid();
 });
-
