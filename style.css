@@ -152,3 +152,47 @@ h1 {
         transform: rotate(-8deg);
     }
 }
+
+#impactFlash {
+    position: absolute;
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+.spark {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spark1 {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    top: 8px;
+    left: 8px;
+}
+
+.spark2 {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 220, 120);
+    top: 2px;
+    left: 12px;
+}
+
+.spark3 {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(255, 150, 60);
+    top: 14px;
+    left: 3px;
+}
+
+.spark4 {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    top: 15px;
+    left: 18px;
+}

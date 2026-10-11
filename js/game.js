@@ -1,17 +1,20 @@
 const mineButton = document.getElementById('mineButton');
 const mineResult = document.getElementById('miningResult');
 const asteroid = document.getElementById('asteroid');
+const impactFlash = document.getElementById('impactFlash');
+
+let currentDirection;
 
 function launchAsteroid() {
     asteroid.style.animation = 'none';
     void asteroid.offsetWidth;
 
     let directions = ['right', 'left', 'bottom'];
-    let randomDirection = directions[Math.floor(Math.random() * directions.length)];
+    currentDirection = directions[Math.floor(Math.random() * directions.length)];
 
-    if (randomDirection === 'right') {
+    if (currentDirection === 'right') {
         asteroid.style.animation = 'asteroidCrashRight 3s linear';
-    } else if (randomDirection === 'left') {
+    } else if (currentDirection === 'left') {
         asteroid.style.animation = 'asteroidCrashLeft 3s linear';
     } else {
         asteroid.style.animation = 'asteroidCrashBottom 3s linear';
@@ -20,6 +23,18 @@ function launchAsteroid() {
 launchAsteroid();
 
 asteroid.addEventListener('animationend', function () {
+    if (currentDirection === 'right') {
+    impactFlash.style.left = '410px';
+    impactFlash.style.top = '160px';
+} else if (currentDirection === 'left') {
+    impactFlash.style.left = '270px';
+    impactFlash.style.top = '160px';
+} else {
+    impactFlash.style.left = '335px';
+    impactFlash.style.top = '225px';
+}
+
+    impactFlash.style.display = 'block';
     mineButton.style.display = 'inline-block';
 });
 
