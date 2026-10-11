@@ -13,6 +13,10 @@ if (randomDirection === 'right') {
     asteroid.style.animation = 'asteroidCrashBottom 3s linear';
 }
 
+asteroid.addEventListener('animationend', function () {
+    mineButton.style.display = 'inline-block';
+});
+
 let commonRocks = 0;
 let uncommonCrystals = 0;
 let rareFragments = 0;
