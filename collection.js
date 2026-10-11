@@ -25,4 +25,5 @@ for (let i = 0; i < allItems.length; i++) {
         itemElement.textContent = '???';
     }
     collection.appendChild(itemElement);
+    itemElement.classList.add('collectionItem');
 }
