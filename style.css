@@ -316,6 +316,12 @@ h1 {
         margin-top: 0;
     }
 
+    #impactFlash,
+    #homeImpactFlash {
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+
     body {
         overflow-x: hidden;
         min-height: 100vh;
