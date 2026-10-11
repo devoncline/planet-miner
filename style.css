@@ -296,7 +296,8 @@ h1 {
 
     #gameArea,
     #homeGameArea {
-        width: calc(100% - 32px);
+        width: calc(100vw - 32px);
+        box-sizing: border-box;
         height: 400px;
         margin-left: auto;
         margin-right: auto;
